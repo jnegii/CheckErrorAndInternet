@@ -3,11 +3,14 @@ package com.tenten.checkinternetconnectionanderrors;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.res.ColorStateList;
+import android.graphics.drawable.GradientDrawable;
 import android.net.ConnectivityManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
@@ -29,10 +32,18 @@ public class ErrorDialog extends Dialog {
 
     }
 
-    public void buttonColor() {
+    public void retryButtonSetColor(ColorStateList colorStateList) {
         retryButton = findViewById(R.id.retry);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-          //  retryButton.setBackgroundTintList(getContext().getResources().getColorStateList(R.andro));
+            retryButton.setBackgroundTintList(colorStateList);
+        }
+
+    }
+
+    public void cancelButtonSetColor(ColorStateList colorStateList) {
+        canclButton = findViewById(R.id.Cancel);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            canclButton.setBackgroundTintList(colorStateList);
         }
 
     }
@@ -43,6 +54,16 @@ public class ErrorDialog extends Dialog {
         this.lblHeading = lblHeading;
         this.lblSubtext = lblSubtext;
         this.lottie = lottie;
+
+    }
+
+    public void setBackground(int start,int end){
+        GradientDrawable gd = new GradientDrawable(
+                GradientDrawable.Orientation.BR_TL,
+                new int[] {start,end});
+        gd.setCornerRadius(0f);
+        RelativeLayout relativeLayout=findViewById(R.id.relativeLayout);
+        relativeLayout.setBackground(gd);
 
     }
 
