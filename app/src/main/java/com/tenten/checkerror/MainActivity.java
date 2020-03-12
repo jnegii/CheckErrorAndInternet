@@ -29,10 +29,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Toast.makeText(MainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
-
                 errorDialog.show();
-                //setErrorDialog();
             }
         });
     }
@@ -51,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         errorDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         errorDialog.setCancelable(false);
         errorDialog.setCanceledOnTouchOutside(false);
+        errorDialog.buttonColor();
     }
 
 

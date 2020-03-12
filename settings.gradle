@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':checkinternetandothererror', ':checkinternetconnectionanderrors'
 rootProject.name='Check Error'

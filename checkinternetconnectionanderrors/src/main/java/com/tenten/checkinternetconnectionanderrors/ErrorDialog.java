@@ -1,4 +1,4 @@
-package com.tenten.checkerror;
+package com.tenten.checkinternetconnectionanderrors;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -32,7 +32,7 @@ public class ErrorDialog extends Dialog {
     public void buttonColor() {
         retryButton = findViewById(R.id.retry);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            retryButton.setBackgroundTintList(getContext().getResources().getColorStateList(R.color.colorPrimary));
+          //  retryButton.setBackgroundTintList(getContext().getResources().getColorStateList(R.andro));
         }
 
     }
