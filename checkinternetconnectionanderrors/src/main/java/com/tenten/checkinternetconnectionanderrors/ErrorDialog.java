@@ -28,9 +28,9 @@ import java.util.HashMap;
 public class ErrorDialog extends Dialog {
     public Activity activity;
     private final View.OnClickListener retryListner, cancellistner;
-    private String lblHeading = null, lblSubtext = null, lottie = "error1.json";
+    private String lblHeading = null, lblSubtext = null, lottie = "nonet.json";
 
-    private String nonetLblHeading = null, nonetlblSubtext = null, nonetlottie = "nonet.json";
+    private String nonetLblHeading = null, nonetlblSubtext = null, nonetlottie = "error1.json";
     private TextView heading, subtext;
     private MaterialButton retryButton, canclButton;
     private LottieAnimationView lottieAnimationView;
@@ -72,11 +72,11 @@ public class ErrorDialog extends Dialog {
 
         this.retryBtnColor = retryBtnColor == 0 ? Color.parseColor("#000000") : retryBtnColor;
         this.retrybtnTextColor = retryBtnTextColor == 0 ? Color.parseColor("#ffffff") : retryBtnTextColor;
-        this.lblHeading = lblHeading == null ? "NO INTERNET" : lblHeading;
-        this.lblSubtext = lblSubtext == null ? "It seem's that you are not connected" : lblSubtext;
+        this.lblHeading = lblHeading == null ? "ERROR OCCURRED" : lblHeading;
+        this.lblSubtext = lblSubtext == null ? "It seem's that some error have been occurred" : lblSubtext;
 
-        this.nonetLblHeading = nonetLblHeading == null ? "ERROR OCCURRED" : nonetLblHeading;
-        this.nonetlblSubtext = nonetlblSubtext == null ? "It seem's that some error have been occurred" : nonetlblSubtext;
+        this.nonetLblHeading = nonetLblHeading == null ? "NO INTERNET" : nonetLblHeading;
+        this.nonetlblSubtext = nonetlblSubtext == null ? "It seem's that you are not connected" : nonetlblSubtext;
         this.retryListner = retryListner;
         this.cancellistner = cancellistner;
         this.check = check;
@@ -176,7 +176,7 @@ public class ErrorDialog extends Dialog {
     }
 
     private void checkConnectAndSetText() {
-        if (isNetworkConnected()) {
+        if (!isNetworkConnected()) {
             heading.setText(lblHeading);
             subtext.setText(lblSubtext);
             lottieAnimationView.setAnimation(lottie);
@@ -188,7 +188,7 @@ public class ErrorDialog extends Dialog {
     }
 
     private boolean onlyInternet() {
-        if (isNetworkConnected()) {
+        if (!isNetworkConnected()) {
             return true;
         } else {
            return false;

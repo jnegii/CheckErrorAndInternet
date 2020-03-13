@@ -60,9 +60,9 @@ private boolean check=false;
 //                }else {
 //                    Toast.makeText(getApplicationContext(), "Not Found", Toast.LENGTH_SHORT).show();
 //                }
-
-
-
+//
+//
+//
 
 
 
@@ -84,15 +84,15 @@ private boolean check=false;
 
                 //TODO FULL BUILD
                     new ErrorDialog.Builder(MainActivity.this)
-                        .setBackgroundGradient(getResources().getColor(R.color.colorAccent),getResources().getColor(R.color.colorPrimaryDark))
-                        .setCancelButtonStrokeColor(getResources().getColor(R.color.greenYellow))
-                        .setCancelButtonTextColor(getResources().getColor(R.color.dark_red))
-                        .setReryButtonTextColor(getResources().getColor(R.color.dark_goldenrod))
-                        .setReryButtonColor(getResources().getColor(R.color.light_pink))
-                        .setErrorOccuredHeading("yash Verma")
-                        .setErrorOccuredSubText("hehaheha")
-                        .setNoInternetHeading("nhi ara tower")
-                        .setNoInternetSubText("Kya ukhad lega")
+//                        .setBackgroundGradient(getResources().getColor(R.color.colorAccent),getResources().getColor(R.color.colorPrimaryDark))
+//                        .setCancelButtonStrokeColor(getResources().getColor(R.color.greenYellow))
+//                        .setCancelButtonTextColor(getResources().getColor(R.color.dark_red))
+//                        .setReryButtonTextColor(getResources().getColor(R.color.dark_goldenrod))
+//                        .setReryButtonColor(getResources().getColor(R.color.light_pink))
+//                        .setErrorOccuredHeading("yash Verma")
+//                        .setErrorOccuredSubText("hehaheha")
+//                        .setNoInternetHeading("nhi ara tower")
+//                        .setNoInternetSubText("Kya ukhad lega")
                         .setRetryButtonClickListner(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
