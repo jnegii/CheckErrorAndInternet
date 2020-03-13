@@ -2,6 +2,8 @@
 
 A short code which can be used to solve all your problems
 
+[![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat-square)](https://android-arsenal.com/api?level=14)
+
 
 ![alt text](https://github.com/jnegii/CheckErrorAndInternet/blob/master/image1.jpeg)
 ![alt text](https://github.com/jnegii/CheckErrorAndInternet/blob/master/image2.jpeg)
