@@ -21,6 +21,7 @@ public class ErrorDialog extends Dialog {
     private TextView heading, subtext;
     private Button retryButton, canclButton;
     private LottieAnimationView lottieAnimationView;
+    private RelativeLayout relativeLayout;
 
 
     public ErrorDialog(Activity activity) {
@@ -62,7 +63,7 @@ public class ErrorDialog extends Dialog {
                 GradientDrawable.Orientation.BR_TL,
                 new int[] {start,end});
         gd.setCornerRadius(0f);
-        RelativeLayout relativeLayout=findViewById(R.id.relativeLayout);
+       relativeLayout=findViewById(R.id.relativeLayout);
         relativeLayout.setBackground(gd);
 
     }
@@ -79,6 +80,7 @@ public class ErrorDialog extends Dialog {
         super.onCreate(savedInstanceState);
 //        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.dialog_layout);
+        relativeLayout=findViewById(R.id.relativeLayout);
         heading = findViewById(R.id.dialogHeading);
         subtext = findViewById(R.id.dialogSubtext);
         lottieAnimationView = findViewById(R.id.lottieDialog);
