@@ -2,7 +2,7 @@
 
 A short code which can be used to solve all your problems
 
-[![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat-square)](https://android-arsenal.com/api?level=14)
+[![API](https://img.shields.io/badge/API-14%2B-yellow.svg?style=flat-square)](https://android-arsenal.com/api?level=16)
 
 
 ![alt text](https://github.com/jnegii/CheckErrorAndInternet/blob/master/image1.jpeg)
@@ -121,12 +121,7 @@ Use this to Check Internet first if available and other error orrcured will be s
 
 ## Versions
 
-#### 3.1.1
+#### 3.1.2
 
 Callbacks added
 
-## Licence
-
-```
-hhhh
-```
