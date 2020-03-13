@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private ErrorDialog errorDialog;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

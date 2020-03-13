@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.ConnectivityManager;
 import android.os.Build;
@@ -59,11 +60,16 @@ public class ErrorDialog extends Dialog {
     }
 
     public void setBackground(int start,int end){
+        relativeLayout=findViewById(R.id.relativeLayout);
+        int[] colors = {Color.parseColor("#008000"),Color.parseColor("#ADFF2F")};
+
+        //create a new gradient color
         GradientDrawable gd = new GradientDrawable(
-                GradientDrawable.Orientation.BR_TL,
-                new int[] {start,end});
+                GradientDrawable.Orientation.TOP_BOTTOM, colors);
+
         gd.setCornerRadius(0f);
-       relativeLayout=findViewById(R.id.relativeLayout);
+
+
         relativeLayout.setBackground(gd);
 
     }
