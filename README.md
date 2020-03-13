@@ -3,6 +3,9 @@
 A short code which can be used to solve all your problems
 
 
+![alt text](https://github.com/jnegii/CheckErrorAndInternet/blob/master/image1.jpeg)
+![alt text](https://github.com/jnegii/CheckErrorAndInternet/blob/master/image2.jpeg)
+
 
 
 ## Setup
