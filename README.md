@@ -1,6 +1,7 @@
-# Check Internet and handle other errors
+# Check Internet and automatically handle other errors
 
 A short code which can be used to solve all your problems
+
 
 
 
@@ -20,7 +21,7 @@ allprojects {
 
 ```java
    	dependencies {
-	        implementation 'com.github.jnegii:CheckErrorAndInternet:3.1.1'
+	        implementation 'com.github.jnegii:CheckErrorAndInternet:3.1.2'
 	}
 ```
 
