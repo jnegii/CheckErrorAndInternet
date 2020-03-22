@@ -97,11 +97,11 @@ public class ErrorDialog extends Dialog {
         setRetryButtonTextColor();
 
 
-        if (!onlyInternet()) {
-            heading.setText(nonetLblHeading);
-            subtext.setText(nonetlblSubtext);
-            lottieAnimationView.setAnimation(nonetlottie);
-        }
+//        if (!onlyInternet()) {
+//            heading.setText(nonetLblHeading);
+//            subtext.setText(nonetlblSubtext);
+//            lottieAnimationView.setAnimation(nonetlottie);
+//        }
 
 
         canclButton.setOnClickListener(new View.OnClickListener() {
@@ -176,7 +176,7 @@ public class ErrorDialog extends Dialog {
     }
 
     private void checkConnectAndSetText() {
-        if (isNetworkConnected()) {
+        if (!isNetworkConnected()) {
             heading.setText(lblHeading);
             subtext.setText(lblSubtext);
             lottieAnimationView.setAnimation(lottie);
@@ -188,10 +188,10 @@ public class ErrorDialog extends Dialog {
     }
 
     private boolean onlyInternet() {
-        if (isNetworkConnected()) {
-            return true;
+        if (!isNetworkConnected()) {
+            return false;
         } else {
-           return false;
+           return true;
         }
     }
 
@@ -293,7 +293,7 @@ public class ErrorDialog extends Dialog {
 
         public boolean buildCheckInternetOnly() {
 
-            ErrorDialog errorDialog = new ErrorDialog(activity, startgradient, endgradient, strokecolor, canclBtnTextColor, retryBtnColor, retrybtnTextColor, lblHeading, lblSubtext, nonetLblHeading, nonetlblSubtext,
+            ErrorDialog errorDialog = new ErrorDialog(activity, startgradient, endgradient, strokecolor, canclBtnTextColor, retryBtnColor, retrybtnTextColor, "NO INTERNET", "It seem's that you are not connected", nonetLblHeading, nonetlblSubtext,
                     onClickListener, cancellistner, true);
             errorDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
             errorDialog.setCanceledOnTouchOutside(true);

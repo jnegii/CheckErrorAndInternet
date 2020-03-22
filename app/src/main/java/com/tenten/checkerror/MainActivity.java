@@ -82,7 +82,9 @@ private boolean check=false;
 
 
 
-                //TODO FULL BUILD
+
+//
+//                //TODO FULL BUILD
                     new ErrorDialog.Builder(MainActivity.this)
 //                        .setBackgroundGradient(getResources().getColor(R.color.colorAccent),getResources().getColor(R.color.colorPrimaryDark))
 //                        .setCancelButtonStrokeColor(getResources().getColor(R.color.greenYellow))
@@ -107,7 +109,7 @@ private boolean check=false;
                         })
                         .build();
 
-
+//
             }
         });
 
