@@ -176,7 +176,7 @@ public class ErrorDialog extends Dialog {
     }
 
     private void checkConnectAndSetText() {
-        if (!isNetworkConnected()) {
+        if (isNetworkConnected()) {
             heading.setText(lblHeading);
             subtext.setText(lblSubtext);
             lottieAnimationView.setAnimation(lottie);
@@ -188,7 +188,7 @@ public class ErrorDialog extends Dialog {
     }
 
     private boolean onlyInternet() {
-        if (!isNetworkConnected()) {
+        if (isNetworkConnected()) {
             return true;
         } else {
            return false;
